@@ -36,9 +36,9 @@ def snippet_3():
 
     a = 1
     b = 1
-    c = (a >= b)
+    c = (a == b)
     if c == True:
-        print(f"The value of c ({c}) is True since a ({a}) is greater than or equal to b ({b}).")
+        print(f"The value of c ({c}) is True since a ({a}) is equal to b ({b}).")
     assert(c == True)  # <-- DO NOT EDIT THIS LINE
 
 
@@ -59,9 +59,9 @@ def snippet_5():
     m = "GOAT"
     n = "goat"
 
-    o = (m < n)
+    o = (m != n)
 
-    print (f"The value of o ({o}) is True since lower case goat is greater than upper case GOAT.")
+    print (f"The value of o ({o}) is True since Python is case sensitive.")
     assert(o == True)  # <-- DO NOT EDIT THIS LINE
 
 

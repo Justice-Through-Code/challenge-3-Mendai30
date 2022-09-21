@@ -16,8 +16,8 @@ def stock_purchases():
     # 1.2 TODO: Ask the client how many dollars they would like to invest (use the string: "How much would you like to invest? $")
     # and save it into a variable
     # NOTE: When you use the `input` function to get user input, what do numbers get saved as?
-    investment_amount = input("How much would you like to invest? $") #They get saved as strings.
-    investment_amount = int(investment_amount)
+    investment_amount = int(input("How much would you like to invest? $")) #They get saved as strings.
+    
 
     # 1.3 TODO: Uncomment the line below to ask the client which stock they're interested in.
     # NOTE: Take a look at how this input string prints out
@@ -28,16 +28,21 @@ def stock_purchases():
 
     # 1.4 TODO: Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
-    if stock_name == amazon.lower:
-        print("You can but 3000 stocks ")
-    elif stock_name == apple.lower:
-        print("You can but 100 stocks ") 
-    elif stock_name == fb.lower:
-        print("You can but 250 stocks ")
-    elif stock_name == google.lower:
-        print("You can but 1400 stocks ")
-    elif stock_name == msft.lower:
-        print("You can but 200 stocks ")    
+    if stock_name.lower() == "amazon":
+        stock = amazon
+        stock_ant = investment_amount // amazon
+    elif stock_name.lower() == "apple":
+        stock = apple
+        stock_ant = investment_amount // apple
+    elif stock_name.lower() == "fb":
+        stock = fb
+        stock_ant = investment_amount // fb
+    elif stock_name.lower() == "google":
+        stock = google
+        stock_ant = investment_amount // google
+    elif stock_name.lower() == "msft":
+        stock = msft
+        stock_ant = investment_amount // msft  
     else:
         print("Not a valid stock")    
 
@@ -45,4 +50,5 @@ def stock_purchases():
     # 1.5 TODO: Once you've calculated the number of stocks that can be purchased,
     # Use an f-string to print the result for the client, ala:
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
-    print(f"{client_name}" has {investment_amount} to invest in {stock_name})
+    print(f"{client_name} has ${dollars} to invest and can buy shares of at thr current price of")
+
